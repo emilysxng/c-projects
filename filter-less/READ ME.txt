@@ -1,0 +1,29 @@
+*** The only code that I wrote is helpers.c
+
+HOW TO RUN: ./filter [-g, -s, -r, or -b] images/[input.bmp] [output.bmp]
+
+
+
+
+GRAYSCALE:
+For each pixel, (make 2 for loops)
+	- find avg of the R, G, and B values.
+	- Round it to the nearest integer.
+	- Set and R, G, and B values to that average.
+
+	to run:
+	./filter -g infile.bmp outfile.bmp
+	
+SEPIA:
+For each pixel, (make 2 for loops),
+	- calculate new sepia R, G, and B with their formulas
+	- round to the nearest integer
+	- cap at 255 (if sepiaRed > 255, then sepiaRed = 255)
+
+  sepiaRed = .393 * originalRed + .769 * originalGreen + .189 * originalBlue
+  sepiaGreen = .349 * originalRed + .686 * originalGreen + .168 * originalBlue
+  sepiaBlue = .272 * originalRed + .534 * originalGreen + .131 * originalBlue
+
+make temp into an array and then instead of 3 if conditions, make 1 for loop which indexes into the array
+
+

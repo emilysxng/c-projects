@@ -1,0 +1,15 @@
+Complete the vote function.
+    "vote" takes a string called name, the name of the candidate who was voted for.
+
+    If name matches one of the names of the candidates, then update that candidate’s vote total to account for the new vote.
+    The vote function in this case should return true to indicate this.
+
+    If name does not match the name of any of the candidates in the election, no vote totals should change.
+    The vote function should return false to indicate an invalid ballot.
+    
+    *** You may assume that no two candidates will have the same name.
+
+Complete the print_winner function.
+    The function should print out the name of the candidate who received the most votes, and then print a newline.
+    The election could end in a tie if multiple candidates have the same number of votes.
+        In this case you should output the names of each of the winners, each on a separate line.

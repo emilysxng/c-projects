@@ -1,0 +1,45 @@
+1) MAKE FUNCTION WHICH GETS KEY FROM CMD LINE ARG
+    return 0 if there is an input
+    return 1 if there is nothing/more than 1 argumentdebug50     ggsdfgsdgsdg & print error message (remind user of how to use: Usage: ./substitution key)
+
+2) VALIDATE KEYS AND PROVIDE ERROR MESSAGES
+     if key is too short/long... (make a function and have it return variable "length". make an if/else statement in the main code: if length is 26, return 0, else, return 1.)
+     if key has characters other than letters... (make a function and have it return 0 or 1 into a bool variable called letters_only. make an if/else statement in the main code)
+     if key has repeated characters... (make individual counters)
+    print corresponding error message and prompt again****
+    it can be a mix of uppercase and lowercase letters. use a for with an if loop inside to make any lowercase letter uppecase
+
+3) GET PLAINTEXT
+    get_string
+
+4) ENCRYPT PLAINTEXT
+    only supports uppercase and lowercase letters (no numbers, spaces, or punctuation)
+    uppercase must remain uppercase. lowercase must remain lowercase.
+
+    array for the key:
+        char key[52];
+        key[0] = first character of key
+        key[1] = second character of key
+        ....
+        key[26] = first character of key + 32
+        key[51] = last character of key + 32
+                                     for loop to fill in the array:
+                                            int y = 0;
+                                            for (int x = 26; x < 52; x++)
+                                            {
+                                                key[x] = key[y] + 32;
+                                                y++;
+                                            }
+                                    // makes a lowercase version of uppercase letters
+
+5) PRINT CIPHERTEXT
+    printf
+
+
+
+
+
+./substitution hello world
+
+argc == 3
+argv == ["hello", "world"]

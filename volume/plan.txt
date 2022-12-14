@@ -1,0 +1,44 @@
+// TODO: Copy header from input file to output file
+
+    - Header = 44 bytes
+    - Use fread to read 44 bytes from the input file (need temp variable, and a pointer to it)
+    - Use fwrite to write 44 bytes to the output file
+
+   - Create an array of bytes to store the header data from the input. ( uint8_t header[44]; = .....)
+
+
+FREAD AND FWRITE:
+ptr: a pointer to the location in memory to store data (when reading from a file) or from which to write data (when writing data to a file)
+size: the number of bytes in an item of data
+nmemb: the number of items of data (each of size bytes) to read or write
+stream: the file pointer to be read from or written to
+
+
+// TODO: Read samples from input file and write updated data to output file
+
+    - Loop through the input file until you reach the end.
+    - Read it into memory
+        - Create a “buffer” in which to store audio samples that you read from the WAV file. Using the int16_t type, you can create a buffer variable: (int16_t temp; ) <- make this an array?
+        - You can then use &temp as an argument for fread and fwrite.
+        - Buffer needed because you not not just copy-pasting: you are modifying the data as well(multiplying it)
+    - Update the volume (multiply each value by a factor)
+        - use a for loop to multiply every data value in the temp array by the factor
+    - Write into output file
+
+
+
+
+    int16_t temp;
+    while (fread (&temp, sizeof(int16_t), 1, input))
+    {
+        temp = temp * factor;
+        fwrite (&temp, sizeof(int16_t), 1, output);
+    }
+
+
+    int16_t buffer;
+    while (fread(&buffer, sizeof(int16_t), 1, input))
+    {
+        buffer = buffer * factor;
+        fwrite(&buffer, sizeof(int16_t), 1, output);
+    }

@@ -1,0 +1,12 @@
+1. Ask both players for their word
+
+2. Compute the score for each word
+    Punctuation does not count for points
+    Uppercase and lowercase have the same value (make all upper with a for loop?)
+
+3. Return the scores
+
+4. Determine a winner or tie
+
+
+

@@ -1,0 +1,50 @@
+for every pixel:
+int counter = 0;
+float temp_red;
+float temp_green;
+float temp_blue;
+    check top left for validity (if either coordinate is greater than min or lesser than max)
+        if valid, counter++
+        float temp_red = copy[height][width].rgbtRed
+        float temp_green
+        float temp_blue
+    check top
+        if valid, counter++
+        temp_red += copy[height][width].rgbtRed
+        green
+        blue
+    check top right
+    check left
+    check right
+    check bottom left
+    check bottom
+    check bottom right
+
+    image[height][width].rgbtRed = round(temp_red/counter)
+    image[height][width].rgbtGreen = round(temp_blue/counter)
+    image[height][width].rgbtBlue = round(temp_blue/counter)
+
+return;
+
+
+// top left
+
+if (image[current_height - 1][current_width - 1] < image[height][width] && image[current_height - 1][current_width - 1] > image[0][0] )
+    {
+        counter++
+        temp_red += copy[height][width].rgbtRed
+        temp_green += copy[height][width].rgbtGreen
+        temp_blue += copy[height][width].rgbtBlue
+    }
+
+
+    for every pixel
+
+    for (int i = 0; i < 3; i++) //grid height
+
+        for (int j = 0; j < 3; j++) // grid width
+
+            int current_grid_height = current_height - i
+            int current_grid_width = current_width - j
+
+

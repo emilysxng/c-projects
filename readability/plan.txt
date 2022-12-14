@@ -1,0 +1,14 @@
+GRADE LEVELS:
+<1 = before grade 1
+1-12 = standard grades
+13 = first year university
+14 = second year university
+15 = third year university
+16 + = fourth year university+
+
+1) get string with "Text: " and convert to lowercase. Save as an array.
+2) make a function called "count_letters" (use isalnum)
+3) make a function called "count_words" (make sure the words variable starts from 1)
+4) make a function called "count_sentences"
+5) go through the formula for grade level. ROUND to the nearest integer.
+6) print the grade level (while following the specifications for under 1 and above 16)

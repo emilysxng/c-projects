@@ -1,0 +1,46 @@
+Implement a program called recover that recovers JPEGs from a forensic image.
+
+    If your program is not executed with exactly one command-line argument, it should remind the user of correct usage, and main should return 1.
+    If the forensic image cannot be opened for reading, your program should inform the user as much, and main should return 1.
+    Your program, if it uses malloc, must not leak any memory.
+
+    First 4 bytes of jpeg: 0xff, 0xd8, 0xff, 0xe(0-f)
+
+    OPEN MEMORY CARD:
+    FILE *f = fopen(argv[1], "r");
+        filename is the file you want to open
+
+    FREAD AND FWRITE:
+    fread/fwrite(data, size, number, inptr);
+        data - pointer to where to store data
+        size - size of each element to read (512)
+        number - number of elements to read (? 1?)
+        inptr - file * to read from
+
+    fread returns number of items of size "size" read
+
+        how to determine whether it got to the end of the jpeg file?
+
+    MAKE BUFFER:
+    For loop that makes temp[0] - temp[2] the first 3 bytes
+    then for the 4th byte:
+    (buffer[3] & 0xf0) == 0xe0
+
+    PRINTING FILENAME:
+    sprintf (filename, "%03i,jpg", 2);
+               new              counterth image
+
+
+    PSEUDOCODE:
+    Open memory card
+    Repeat for each block, until the end of the card
+        If the start of a new JPEG is found
+            If jpeg
+                make new file
+                make filename 000
+                allocate memory for filename (4bytes)
+                add one to counter
+        Else, if not the start of a new JPEG
+            continue writing to file ###
+        Free memory
+    Close
