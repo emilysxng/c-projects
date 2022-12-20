@@ -7,7 +7,7 @@ Projects in this repo:**
 - Mario: Prints a pyramid like those in Mario based on user's height input.
 - Plurality: Simulates a pluraility style vote based on user input on number of voters & candidates.
 - Readability: Returns approximate reading level of text inputted by user.
-- Recover: Recovers JPEG's from a forensix image.
+- Recover: Recovers JPEG's from a forensic image.
 - Runoff: Simulates a runoff style vote based on user input on number of voters & candidates.
 - Scrabble: Takes two words from both player 1 and 2, calculates the score that they would revieve in Scrabble, and returns the winner.
 - Speller: Checks if words within a text are spelled correctly according to a dictionary. (Note - only dictionary.c was written by me).
