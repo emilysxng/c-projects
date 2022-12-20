@@ -1,5 +1,5 @@
 **An assorted collection of projects I made in C from the resources offered on Harvard's CS50x course!
-Projects in this repo:
+Projects in this repo:**
 - Cash: Takes a monetary value and returns the least amount of American coins it is equivalent to.
 - Credit: Takes a credit card number, validates it using a checksum, and returns the type of credit card it is (AMEX, VISA, Mastercard, neither).
 - Filter: Takes a bmp file and applies a sepia, blur, or horizontal reflection filter effect.
